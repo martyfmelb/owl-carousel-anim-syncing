@@ -4,5 +4,53 @@
 
 {% block content %}
   <h1>OwlCarousel</h1>
-  {{ owlcarousel.content({}) }}
+
+  {% set slides %}
+    <div class="mf-gaudy-slide">
+      <div class="mf-gaudy-slide__header" data-mf-owl-carousel-slow-scrolling>
+        <h2>Heading 1</h2>
+      </div>
+      <div class="mf-gaudy-slide__body">
+        <div class="mf-wysiwyg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mf-gaudy-slide">
+      <div class="mf-gaudy-slide__header" data-mf-owl-carousel-slow-scrolling>
+        <h2>Heading Two</h2>
+      </div>
+      <div class="mf-gaudy-slide__body">
+        <div class="mf-wysiwyg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mf-gaudy-slide">
+      <div class="mf-gaudy-slide__header" data-mf-owl-carousel-slow-scrolling>
+        <h2>Item Heading 3</h2>
+      </div>
+      <div class="mf-gaudy-slide__body">
+        <div class="mf-wysiwyg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mf-gaudy-slide">
+      <div class="mf-gaudy-slide__header" data-mf-owl-carousel-slow-scrolling>
+        <h2>Item Four</h2>
+      </div>
+      <div class="mf-gaudy-slide__body">
+        <div class="mf-wysiwyg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+        </div>
+      </div>
+    </div>
+  {% endset %}
+  {{ owlcarousel.content({slides: slides}) }}
+
 {% endblock %}

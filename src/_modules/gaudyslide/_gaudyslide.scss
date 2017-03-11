@@ -1,0 +1,55 @@
+.mf-gaudy-slide {
+  position: relative;
+  z-index: 0;
+  background: #336699;
+  height: 75vh;
+  color: #FFFFFF;
+  padding: 30px;
+  text-align: center;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(http://placekitten.com/900/600) center center;
+    background-size: cover;
+    opacity: .5;
+  }
+
+  &__header {
+    position: absolute;
+    text-align: center;
+    pointer-events: none;
+    top: 30px;
+    left: 30px;
+    width: calc(100% - 60px);
+    z-index: 1;
+    color: #FFFFFF;
+
+    h2 {
+      font-size: 64px;
+      font-weight: normal;
+    }
+  }
+
+  &__header + &__body {
+    margin-top: 1em;
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+}

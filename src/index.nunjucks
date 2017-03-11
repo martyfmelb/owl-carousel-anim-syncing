@@ -1,0 +1,8 @@
+{% extends '_layouts/base.nunjucks' %}
+
+{% import "_modules/owlcarousel/owlcarousel.nunjucks" as owlcarousel %}
+
+{% block content %}
+  <h1>OwlCarousel</h1>
+  {{ owlcarousel.content({}) }}
+{% endblock %}

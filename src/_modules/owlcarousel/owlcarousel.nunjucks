@@ -1,0 +1,18 @@
+{% macro content(spec) %}
+
+{% set spec = spec or {} %}
+{% set _theme = spec.theme or 'default' %}
+
+<div data-mf-owl-carousel='{
+    "items": 1
+  }'
+     class="mf-owl-carousel {{'mf-owl-carousel--' + _theme}}">
+  <div class="owl-carousel">
+    <div>Slide 1</div>
+    <div>Slide 2</div>
+    <div>Slide 3</div>
+    <div>Slide 4</div>
+  </div>
+</div>
+
+{% endmacro %}

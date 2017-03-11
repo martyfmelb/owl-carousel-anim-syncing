@@ -13,7 +13,8 @@ var exports = function(el, config) {
 
   function repaint() {
     var transformString = window.getComputedStyle($owlStage.get(0)).transform;
-    var carouselScrollLeftStringMatch = transformString.match(/matrix\(.*,.*,.*,.*,(.*),.*\)/);
+    var carouselScrollLeftStringMatch = transformString.match(/matrix\(.*,.*,.*,.*,(.*),.*\)/) ||
+      transformString.match(/matrix3d\(.*,.*,.*,.*,.*,.*,.*,.*,.*,.*,.*,.*,(.*),.*,.*,.*\)/);
     var carouselScrollLeft = parseInt(carouselScrollLeftStringMatch ? carouselScrollLeftStringMatch[1] : 0, 10);
 
     $el.find('[data-mf-owl-carousel-slow-scrolling]').each(function() {
@@ -24,7 +25,7 @@ var exports = function(el, config) {
       var parentSlideLeft = parentSlideIndex * parentSlideWidth;
       $scrollDifferently.css({
         'transform': 'translate3d(' + Math.round(carouselScrollLeft + parentSlideLeft) / 4 + 'px, 0px, 0px)',
-        'opacity': 1 - Math.abs(parentSlideLeft + carouselScrollLeft) / 500
+        'opacity': Math.max(0, 1 - Math.abs(parentSlideLeft + carouselScrollLeft) / parentSlideWidth)
       });
     });
     window.requestAnimationFrame(repaint);

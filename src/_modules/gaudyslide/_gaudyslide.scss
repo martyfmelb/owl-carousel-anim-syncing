@@ -34,11 +34,17 @@
     width: calc(100% - 60px);
     z-index: 1;
     color: #FFFFFF;
+  }
 
-    h2 {
-      font-size: 64px;
-      font-weight: normal;
-    }
+  &__heading {
+    font-size: 64px;
+    font-weight: normal;
+  }
+
+  &__running-heading {
+    font-size: 16px;
+    letter-spacing: .2em;
+    font-weight: bold;
   }
 
   &__header + &__body {

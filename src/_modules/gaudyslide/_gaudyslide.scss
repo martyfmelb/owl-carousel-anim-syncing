@@ -11,6 +11,11 @@
   display: flex;
   flex-direction: column;
 
+  &--inverted {
+    color: #000000;
+    background: #FFFFFF;
+  }
+
   &:before {
     content: "";
     display: block;
@@ -22,18 +27,35 @@
     bottom: 0;
     background: url(http://placekitten.com/900/600) center center;
     background-size: cover;
-    opacity: .5;
+    opacity: .33;
   }
 
-  &__header {
-    position: absolute;
-    text-align: center;
-    pointer-events: none;
-    top: 30px;
-    left: 30px;
-    width: calc(100% - 60px);
-    z-index: 1;
-    color: #FFFFFF;
+  &__header + &__body {
+    margin-top: 1em;
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+}
+
+.mf-gaudy-slide-overlay {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  pointer-events: none;
+  top: 30px;
+  left: 30px;
+  height: calc(75vh - 30px);
+  right: 30px;
+  color: #FFFFFF;
+
+  &--inverted {
+    color: #000000;
   }
 
   &__heading {
@@ -47,15 +69,16 @@
     font-weight: bold;
   }
 
-  &__header + &__body {
-    margin-top: 1em;
-  }
-
-  &__body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
+  &__panel {
+    font-size: .75em;
+    line-height: 1.5;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -25%;
+    width: 50%;
+    background: rgba(#FFFFFF, .85);
+    padding: 15px;
+    color: #000000;
   }
 }

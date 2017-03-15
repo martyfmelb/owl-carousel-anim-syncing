@@ -24,7 +24,7 @@ var exports = function(el, config) {
 
     var i = 0;
 
-    $el.find('[data-mf-owl-carousel-slow-scrolling]').each(function() {
+    $el.find('[data-mf-owl-carousel-overlay]').each(function() {
       var $scrollDifferently = $(this);
 
       var $parentSlide = $scrollDifferently.data('originalParent');
@@ -39,19 +39,22 @@ var exports = function(el, config) {
     window.requestAnimationFrame(repaint);
   }
 
-  $el.find('[data-mf-owl-carousel-slow-scrolling]').each(function() {
+  $el.find('[data-mf-owl-carousel-overlay]').each(function() {
     var $popItOut = $(this);
     $popItOut.data('originalParent', $popItOut.closest('.owl-item'));
     $popItOut.data('originalParentIndex', $popItOut.closest('.owl-item').prevAll().length);
     $el.append($popItOut);
 
-    var $heading = $popItOut.find('h2');
-    var $runningHeading = $popItOut.find('h3');
+    var $runningHeading = $popItOut.find('[data-mf-owl-carousel-overlay-anim=one]');
+    var $heading = $popItOut.find('[data-mf-owl-carousel-overlay-anim=two]');
+    var $panel = $popItOut.find('[data-mf-owl-carousel-overlay-anim=three]');
     var tl = new TimelineLite();
-    tl.from($heading, 0.5, {x: -100, y: 0, force3D: true, opacity: 0});
-    tl.from($runningHeading, 0.5, {x: 0, y: 0, force3D: true, opacity: 0}, '-=0.5');
-    tl.to($heading, 0.5, {x: 100, y: 0, force3D: true, opacity: 0});
-    tl.to($runningHeading, 0.5, {x: 0, y: 0, force3D: true, opacity: 0}, '-=0.5');
+    tl.from($runningHeading, 0.5, {x: 0, y: 0, force3D: true, opacity: 0});
+    tl.from($heading, 0.5, {x: -100, y: 0, force3D: true, opacity: 0}, '-=0.5');
+    tl.from($panel, 0.5, {x: -200, y: 0, force3D: true, opacity: 0}, '-=0.5');
+    tl.to($runningHeading, 0.5, {x: 0, y: 0, force3D: true, opacity: 0});
+    tl.to($heading, 0.5, {x: 100, y: 0, force3D: true, opacity: 0}, '-=0.5');
+    tl.to($panel, 0.5, {x: 200, y: 0, force3D: true, opacity: 0}, '-=0.5');
     $popItOut.data('tl', tl);
 
   });

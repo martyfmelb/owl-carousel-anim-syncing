@@ -5,7 +5,8 @@
 {% set _theme = spec.theme or 'default' %}
 
 <div data-mf-owl-carousel='{
-    "items": 1
+    "items": 1,
+    "smartSpeed": 500
   }'
      class="mf-owl-carousel {{'mf-owl-carousel--' + _theme}}">
   <div class="owl-carousel">

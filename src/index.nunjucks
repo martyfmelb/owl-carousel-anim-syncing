@@ -7,9 +7,27 @@
 
   {% set slides %}
     <div class="mf-gaudy-slide">
-      <div class="mf-gaudy-slide__header" data-mf-owl-carousel-slow-scrolling>
-        <h3 class="mf-gaudy-slide__running-heading">Running heading</h2>
-        <h2 class="mf-gaudy-slide__heading">Heading 1</h2>
+      <div class="mf-gaudy-slide-overlay" data-mf-owl-carousel-overlay>
+        <h3 data-mf-owl-carousel-overlay-anim="one" class="mf-gaudy-slide-overlay__running-heading">Running heading</h2>
+        <h2 data-mf-owl-carousel-overlay-anim="two" class="mf-gaudy-slide-overlay__heading">Heading 1</h2>
+        <div class="mf-gaudy-slide-overlay__panel" data-mf-owl-carousel-overlay-anim="three" >
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+        </div>
+      </div>
+      <div class="mf-gaudy-slide__body">
+        <div class="mf-wysiwyg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mf-gaudy-slide mf-gaudy-slide--inverted">
+      <div class="mf-gaudy-slide-overlay mf-gaudy-slide-overlay--inverted" data-mf-owl-carousel-overlay>
+        <h3 data-mf-owl-carousel-overlay-anim="one" class="mf-gaudy-slide-overlay__running-heading">Running heading</h2>
+        <h2 data-mf-owl-carousel-overlay-anim="two" class="mf-gaudy-slide-overlay__heading">Heading Two</h2>
+        <div class="mf-gaudy-slide-overlay__panel" data-mf-owl-carousel-overlay-anim="three" >
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+        </div>
       </div>
       <div class="mf-gaudy-slide__body">
         <div class="mf-wysiwyg">
@@ -19,9 +37,12 @@
       </div>
     </div>
     <div class="mf-gaudy-slide">
-      <div class="mf-gaudy-slide__header" data-mf-owl-carousel-slow-scrolling>
-        <h3 class="mf-gaudy-slide__running-heading">Running heading</h2>
-        <h2 class="mf-gaudy-slide__heading">Heading Two</h2>
+      <div class="mf-gaudy-slide-overlay" data-mf-owl-carousel-overlay>
+        <h3 data-mf-owl-carousel-overlay-anim="one" class="mf-gaudy-slide-overlay__running-heading">Yes it can change</h2>
+        <h2 data-mf-owl-carousel-overlay-anim="two" class="mf-gaudy-slide-overlay__heading">Item Heading 3</h2>
+        <div class="mf-gaudy-slide-overlay__panel" data-mf-owl-carousel-overlay-anim="three" >
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+        </div>
       </div>
       <div class="mf-gaudy-slide__body">
         <div class="mf-wysiwyg">
@@ -31,21 +52,12 @@
       </div>
     </div>
     <div class="mf-gaudy-slide">
-      <div class="mf-gaudy-slide__header" data-mf-owl-carousel-slow-scrolling>
-        <h3 class="mf-gaudy-slide__running-heading">Yes it can change</h2>
-        <h2 class="mf-gaudy-slide__heading">Item Heading 3</h2>
-      </div>
-      <div class="mf-gaudy-slide__body">
-        <div class="mf-wysiwyg">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
+      <div class="mf-gaudy-slide-overlay" data-mf-owl-carousel-overlay>
+        <h3 data-mf-owl-carousel-overlay-anim="one" class="mf-gaudy-slide-overlay__running-heading">Running heading</h2>
+        <h2 data-mf-owl-carousel-overlay-anim="two" class="mf-gaudy-slide-overlay__heading">Item Four</h2>
+        <div class="mf-gaudy-slide-overlay__panel" data-mf-owl-carousel-overlay-anim="three" >
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et ligula facilisis mi imperdiet consectetur. Proin ac congue ligula, in maximus urna. Donec non aliquam turpis, vel semper lectus. Suspendisse metus tellus, blandit at ultricies et, faucibus sit amet velit. Nam bibendum pharetra placerat. Sed finibus at elit sed ultrices. Praesent auctor ligula urna, ultricies hendrerit enim eleifend ac. Proin efficitur velit lacus, ac vestibulum nisi viverra nec. Ut pulvinar bibendum consectetur.</p>
         </div>
-      </div>
-    </div>
-    <div class="mf-gaudy-slide">
-      <div class="mf-gaudy-slide__header" data-mf-owl-carousel-slow-scrolling>
-        <h3 class="mf-gaudy-slide__running-heading">Running heading</h2>
-        <h2 class="mf-gaudy-slide__heading">Item Four</h2>
       </div>
       <div class="mf-gaudy-slide__body">
         <div class="mf-wysiwyg">
